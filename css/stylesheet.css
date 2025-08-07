@@ -907,3 +907,16 @@ cite {
     font-size: 1.8rem;
   }
 }
+
+/* Desktop / tablet default styles here */
+
+@media (max-width: 768px) {
+  /* Styles for mobile only */
+  body {
+    background-color: #111;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+}
