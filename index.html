@@ -8,7 +8,26 @@
     <link href="css/fonts.css" media="all" rel="stylesheet">
     <link href="images/transparentlogo.png" rel="apple-touch-icon"/>
 </head>
-<body>
+<!-- Mobile Hamburger -->
+<div class="hamburger" onclick="toggleMenu()">
+    ☰
+</div>
+</nav>
+
+<!-- Mobile Dropdown Menu -->
+<ul class="mobile-menu" id="mobileMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="members.html">Members</a></li>
+    <li><a href="shows.html">Shows</a></li>
+    <li><a href="press.html">Press</a></li>
+    <li><a href="merch.html">Merch</a></li>
+</ul>
+
+<script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+</script>
 <div class="navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400" role="banner">
     <div class="navigation-items">
         <a

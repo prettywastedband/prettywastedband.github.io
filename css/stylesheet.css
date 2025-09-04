@@ -997,30 +997,49 @@ cite {
   margin: 2rem 0;
 }
 
-/* Mobile Dropdown Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu (hidden by default) */
 .mobile-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
-  list-style: none;
   background: black;
+  list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out; /* animation */
 }
 
 .mobile-menu li {
-  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #333;
 }
 
-.mobile-menu a {
-  text-decoration: none;
+.mobile-menu li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
   color: white;
+  text-decoration: none;
 }
 
-/* Active State (dropdown open) */
+.mobile-menu li a:hover {
+  background: #222;
+}
+
+/* When active, show dropdown */
 .mobile-menu.active {
-  max-height: 500px; /* enough to show all items */
-  transition: max-height 0.5s ease-in; /* smooth slide */
+  display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide desktop links */
+  }
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
 }
